@@ -97,9 +97,15 @@ public class ParkingService {
 		}
 	}
 
-	private String chargeByHour(int hour) {
-		// TODO Auto-generated method stub
-		return null;
+	private int chargeByHour(int hour) {
+		if(hour==0)
+			return 0;
+		else if(hour<2)
+			return hour*10;
+		else {
+			hour=hour-2;
+			return (hour*10)+10;
+			}
 	}
 
 	private ParkingSlot makeParkingSlot(String str) {
